@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace; /* Apply Roboto Mono font to all text */
+}
+
+/* Add the rest of your CSS rules below */
+
+
+/* Add the rest of your CSS rules below */
+
+.navbar{
+    background: #00843D;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container{
+    display:flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ffd700 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.fa-flight-departure{
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 80px;
+}
+
+.navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: #556b2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #C99700;
+}
+
+.button:hover{
+    transition: all 0.3s ease;
+    background: #98fb98;
+}
+
+.navbar__links:hover{
+    transition: all 0.3s ease;
+    color: #f77062;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0; 
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #242222;
+
+    }
+    .navbar__menu.active{
+        background: #242222;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height:50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+/* Hero Section CSS */
+.main {
+    background: #0C2340;
+}
+
+.main__container{
+    background: #0C2340;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto; 
+    height: 90vh;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.main__content {
+    text-align: center; /* Center align the text */
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align horizontally */
+}
+
+.main__content h1 {
+    font-size: 3rem;
+    background-color: #ff8177; /* Solid background color */
+    background-image: linear-gradient(to top, #111, #ffb199); /* Gradient background */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-top: 0; /* Reset default margin */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+
+
+.main__content h2{
+    background-color: #ff8177;
+    font-size: 2rem;
+    background-image: linear-gradient(to top, #111, #ffb199);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+}
+
+#main__img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin: 0 0 0 2rem;
+}
+
+/* Mobile Response */
+@media screen and (max-width: 768px) {
+    .main__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    .main__content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2{
+        font-size: 3rem;
+    }
+
+    #main__content p{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2{
+        font-size: 2rem;
+    }
+
+    #main__content p{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+
+}
+img{
+    width: 80%;
+    height: 80;
+    align-items: center;    
+}
+
+.image-container img.confidence-resume,
+.image-container img.tomi-resume {
+    max-width: 70%; /* Shrink the images to 90% of their original width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Make sure images are centered properly */
+    margin: 0 auto; /* Center the images horizontally */
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+/* Resizing the image */
+.solidworks-image {
+    width: 75%; /* Adjust the percentage to resize the image */
+    height: auto;
+    display: block;
+    margin-right:  auto; /* Center the image horizontally */
+}
+
+.horizontal-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Adjust as needed */
+}
+
+.glider-header {
+    text-align: center; /* Center align the text horizontally */
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    height: 5vh; /* Ensure the header takes up the full height of the viewport */
+    margin: 0; /* Reset default margin */
+}
+
+.eih-header {
+    text-align: center; /* Center align the text horizontally */
+    display: flex;
+    justify-content: left; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    height: auto; /* Adjust height as needed */
+    margin: 0; /* Reset default margin */
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+}
+
+.eih-iframes{
+    width: 45%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Add margin between iframes */
+}
+
+
+.body {
+    background: #0C2340;
+}
+
+.glider-div {
+    background: #0C2340;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto; 
+    width: 100%;
+    max-width: 1300px;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    /* Adjust as needed */
+}
+
+.about-us-header h1{
+    text-align: center; /* Center align the text horizontally */
+    display: flex;
+    justify-content: left; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    height: auto; /* Adjust height as needed */
+    margin: 0; /* Reset default margin */
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+}
